@@ -14,7 +14,7 @@ Professional Next.js landing page for Orbit - Your AI Assistant on WhatsApp.
 
 ## Current Status
 
-🔸 **Test Mode**: Landing page currently uses WhatsApp test number (15551680651)
+✅ **Production Mode**: Landing page uses WhatsApp number (17186769888)
 
 ## Development
 
@@ -94,7 +94,7 @@ git push -u origin main
 4. **Update Landing Page with Production Number**
    - Edit \`/app/page.tsx\` line 10:
    \`\`\`typescript
-   const WHATSAPP_NUMBER = 'YOUR_PRODUCTION_NUMBER'; // e.g., '15551234567'
+   const WHATSAPP_NUMBER = '17186769888';
    \`\`\`
    - Commit and push → Vercel auto-deploys
 
@@ -120,11 +120,11 @@ Optional for analytics:
 
 ## Updating WhatsApp Number
 
-To switch from test to production number:
+To switch the WhatsApp number:
 
 \`\`\`typescript
 // In app/page.tsx
-const WHATSAPP_NUMBER = 'YOUR_NEW_NUMBER'; // Line 10
+const WHATSAPP_NUMBER = '17186769888'; // Line 10
 \`\`\`
 
 Commit, push, and Vercel will auto-deploy in 2 minutes.

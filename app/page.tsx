@@ -7,7 +7,7 @@ export default function Home() {
   const qrCanvasRef = useRef<HTMLCanvasElement>(null);
 
   // WhatsApp number and link
-  const WHATSAPP_NUMBER = '15551680651';
+  const WHATSAPP_NUMBER = '17186769888';
   const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi`;
 
   // Generate QR code
