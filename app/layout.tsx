@@ -13,13 +13,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Orbit - Your AI Assistant on WhatsApp",
-  description: "Let Orbit handle your shopping, travel, and daily tasks through WhatsApp. Book flights, order food, compare prices, and more - all via chat.",
-  keywords: ["AI assistant", "WhatsApp", "travel booking", "shopping assistant", "personal assistant", "AI chat"],
+  title: "Brevio — your inbox, only the important parts",
+  description:
+    "Brevio is an executive assistant in beta that watches your Gmail and tells you only what's important. A product of Orbit AI Labs.",
+  keywords: ["Brevio", "Gmail assistant", "email assistant", "iMessage alerts", "inbox triage", "Orbit AI Labs"],
   openGraph: {
-    title: "Orbit - Your AI Assistant on WhatsApp",
-    description: "Let Orbit handle your shopping, travel, and daily tasks through WhatsApp.",
+    title: "Brevio — your inbox, only the important parts",
+    description:
+      "Brevio is an executive assistant in beta that watches your Gmail and tells you only what's important.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brevio — your inbox, only the important parts",
+    description:
+      "Brevio is an executive assistant in beta that watches your Gmail and tells you only what's important.",
   },
 };
 
