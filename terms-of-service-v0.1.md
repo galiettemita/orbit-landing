@@ -113,7 +113,7 @@ If any portion of this section is held unenforceable, the remaining limitations 
 
 ## 11. Governing law and disputes
 
-These Terms are governed by the laws of _<jurisdiction, e.g. the State of California, United States>_, without regard to its conflict-of-law principles. Any dispute arising out of or relating to Brevio or these Terms will be resolved in the courts located in _<county and state, e.g. San Francisco County, California>_, and you and Brevio consent to the personal jurisdiction of those courts.
+These Terms are governed by the laws of the State of New York, United States, without regard to its conflict-of-law principles. Any dispute arising out of or relating to Brevio or these Terms will be resolved in the courts located in New York County, New York, and you and Brevio consent to the personal jurisdiction of those courts.
 
 > **Operator note (strip before paste):** Pick the jurisdiction you actually want to be sued in. Founder's home state is the usual default; check with whoever signs off on your contracts.
 

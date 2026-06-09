@@ -4,18 +4,16 @@ import path from "path";
 // Today's publish date, in YYYY-MM-DD as required for the "Last updated" line.
 export const PUBLISH_DATE = "2026-06-08";
 
-// Founder's home state is unknown — left as a TODO for the founder to fill in
-// before relying on the governing-law clause. See report.
-export const JURISDICTION = "TODO_JURISDICTION";
-
 /**
  * Read a legal markdown source file and prepare it for publication WITHOUT
- * editing the source file on disk. We:
+ * editing the source file body on disk. We:
  *   - strip the top operator-only blockquote (first `>` through the first `---`),
  *   - strip the bottom operator footer (everything from `### Operator footer`),
  *   - strip any inline operator-note blockquote marked "strip before paste",
- *   - set the "Last updated" line to today's date,
- *   - fill governing-law `<jurisdiction>` placeholders.
+ *   - set the "Last updated" line to today's date.
+ *
+ * The Terms §11 governing-law clause (New York) is now filled directly in the
+ * source markdown, so no placeholder substitution is needed here.
  */
 export function loadLegalMarkdown(fileName: string): string {
   const raw = fs.readFileSync(
@@ -57,16 +55,6 @@ export function loadLegalMarkdown(fileName: string): string {
 
   // 5. Set the publish date.
   text = text.replace(/_<publish date>_/g, PUBLISH_DATE);
-
-  // 6. Fill governing-law placeholders (Terms §11).
-  text = text.replace(
-    /_<jurisdiction, e\.g\. the State of California, United States>_/g,
-    JURISDICTION
-  );
-  text = text.replace(
-    /_<county and state, e\.g\. San Francisco County, California>_/g,
-    JURISDICTION
-  );
 
   return text;
 }
