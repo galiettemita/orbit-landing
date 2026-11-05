@@ -1,47 +1,39 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import SiteHeader from "./components/SiteHeader";
+import Footer from "./components/Footer";
+import Motion from "./components/Motion";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Brevio — your inbox, only the important parts",
+  metadataBase: new URL("https://testing-orbit.com"),
+  title: {
+    default: "Orbit — Intelligence for agent-led commerce",
+    template: "%s | Orbit",
+  },
   description:
-    "Brevio is an executive assistant in beta that watches your Gmail and tells you only what's important. A product of Orbit AI Labs.",
-  keywords: ["Brevio", "Gmail assistant", "email assistant", "iMessage alerts", "inbox triage", "Orbit AI Labs"],
+    "Orbit is a seller-side AI agent helping personal buying agents understand, compare and recommend products from participating merchants.",
+  robots: { index: false, follow: false },
   openGraph: {
-    title: "Brevio — your inbox, only the important parts",
-    description:
-      "Brevio is an executive assistant in beta that watches your Gmail and tells you only what's important.",
+    title: "Orbit — Intelligence for agent-led commerce",
+    description: "Merchant knowledge. Agent understanding.",
     type: "website",
+    images: ["/orbit-social.svg"],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Brevio — your inbox, only the important parts",
-    description:
-      "Brevio is an executive assistant in beta that watches your Gmail and tells you only what's important.",
-  },
+  icons: { icon: "/orbit-mark.svg" },
 };
-
+export const viewport: Viewport = { themeColor: "#080911" };
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" data-scroll-behavior="smooth">
+      <body>
+        <a className="skip-link" href="#content">
+          Skip to content
+        </a>
+        <SiteHeader />
+        <main id="content">{children}</main>
+        <Footer />
+        <Motion />
       </body>
     </html>
   );

@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Private policy drafts and review artifacts never enter public Git source.
+/review-inputs/
+/review-evidence/
+/.openai/
