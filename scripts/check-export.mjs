@@ -27,7 +27,7 @@ for (const path of paths) {
     links++;
   }
   if (["privacy", "terms"].includes(path)) {
-    assert.match(html, /Approval pending/);
+    assert.match(html, /Publication pending/);
     assert.doesNotMatch(
       html,
       /Scope of this review draft|Status and proposed scope|Required owner decisions/,

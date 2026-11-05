@@ -30,12 +30,6 @@ export default function RootLayout({
         <a className="skip-link" href="#content">
           Skip to content
         </a>
-        {process.env.ORBIT_REVIEW_MODE === "1" ? (
-          <div className="review-banner">
-            PRIVATE REVIEW <span>·</span> Prelaunch website · Policies are not
-            effective
-          </div>
-        ) : null}
         <SiteHeader />
         <main id="content">{children}</main>
         <Footer />
