@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import LegalPage from "../components/LegalPage";
 export const metadata: Metadata = {
-  title: "Privacy — approval pending",
+  title: "Privacy",
   robots: { index: false, follow: false },
 };
 export default function Privacy() {
